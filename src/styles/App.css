@@ -1,0 +1,36 @@
+.App {
+  text-align: center;
+  min-height: 90%;
+  background: rgb(6,0,116);
+  background: linear-gradient(45deg, rgba(6,0,116,1) 0%, rgba(7,53,150,1) 32%, rgba(0,212,255,1) 100%);
+}
+
+.header {
+  background-color: #282c34;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  flex-direction: row;
+  padding-left:10vw;
+  padding-right:10vw;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+a :hover {
+  text-decoration: underline;
+  color: rgb(172, 172, 172);
+}
+
+ul li{
+  color: white;
+  display: inline;
+  margin-left:40px;
+}
