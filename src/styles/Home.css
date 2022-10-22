@@ -1,0 +1,11 @@
+.nameForm {
+  margin: 10px;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.answer {
+  margin: 10px;
+  resize: none;
+}

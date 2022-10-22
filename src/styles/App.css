@@ -1,8 +1,7 @@
 .App {
   text-align: center;
   min-height: 90%;
-  background: rgb(6,0,116);
-  background: linear-gradient(45deg, rgba(6,0,116,1) 0%, rgba(7,53,150,1) 32%, rgba(0,212,255,1) 100%);
+
 }
 
 .header {
@@ -34,3 +33,4 @@ ul li{
   display: inline;
   margin-left:40px;
 }
+
