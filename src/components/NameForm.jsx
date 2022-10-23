@@ -10,14 +10,29 @@ function NameForm(props) {
   }
 
   function updateHandler() {
-    axios.get(props.url).then((res) => {
-      setData(res.data);
-    }).catch((err) => {
-      console.log(err)
-    });
+    if (props.type === "get"){
+      axios.get(props.url + value).then((res) => {
+        setData(res.data);
+      }).catch((err) => {
+        console.log(err);
+      });
+      if (data != null){
+        setData(data);
+      }
+    }
+    else if (props.type === "delete") {
+      axios.delete(props.url + value).catch((err) => {
+        console.log(err);
+      });
+      setData({name: "succesfuly deleted, maybe, check console"});
+    }
+    else if (props.type === "post") {
 
-    if (data != null){
-      setData(data);
+      let json = { name: value };
+      axios.post(props.url, json)
+      .catch((err) => {
+        console.log(err);
+      });
     }
   };
 
@@ -26,7 +41,7 @@ function NameForm(props) {
   return (
     <div className='nameForm'>
       <div>
-          Name:
+          <p>{props.name}</p>
           <input
             type="text"
             value={value}
@@ -36,7 +51,7 @@ function NameForm(props) {
       <div>
         <button onClick={updateHandler}>Click</button>
       </div>
-      <textarea className="answer" rows="10" cols="30" value={data?.joke} readonly></textarea>
+      <textarea className="answer" rows="10" cols="30" value={data?.name} readOnly></textarea>
     </div>
   );
 }

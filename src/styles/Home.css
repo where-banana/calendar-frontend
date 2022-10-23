@@ -5,7 +5,31 @@
   flex-direction: row;
 }
 
+.nameForm > div {
+  margin: 5px;
+}
+
+.nameForm > div:first-child {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.nameForm > div:first-child > p {
+  margin: 5px;
+}
+
 .answer {
   margin: 10px;
   resize: none;
+}
+
+.inputs {
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs > input {
+  margin-top: 15px;
 }
